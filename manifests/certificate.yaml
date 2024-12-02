@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tan-dara5304-spring-greadle-21-certificate
+  namespace: tan-dara5304-spring-greadle-21
+spec:
+  secretName: tan-dara5304-spring-greadle-21-secret-tls
+  commonName: tan-dara5304-spring-greadle-21.assessify.org
+  dnsNames:
+  - tan-dara5304-spring-greadle-21.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
