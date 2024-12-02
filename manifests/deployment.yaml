@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tan-dara5304-spring-greadle-21-deployment
+  labels:
+    app: tan-dara5304-spring-greadle-21
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tan-dara5304-spring-greadle-21
+  template:
+    metadata:
+      labels:
+        app: tan-dara5304-spring-greadle-21
+    spec:
+      containers:
+        - name: tan-dara5304-spring-greadle-21-container
+          image: pipejet/tan-dara5304-spring-greadle-21:latest
+          ports:
+            - containerPort: 8080
